@@ -20,8 +20,11 @@ h1 { margin: 0 0 4px; font-size: 24px; letter-spacing: -0.02em; }
   border-top: 1px solid #dde4ea; border-bottom: 1px solid #dde4ea; }
 .grid { display: flex; width: max-content; }
 .col { flex: 0 0 var(--col); border-left: 1px solid #e6ecf2; }
+/* Fixed height, not auto: each column has its own header, so they must agree
+   on a height or the columns stop lining up. Tall enough for all four lines. */
 .head { position: sticky; top: 0; z-index: 3; background: #f4f7fa;
-  border-bottom: 2px solid #b9c6d2; padding: 8px 10px; height: 74px; }
+  border-bottom: 2px solid #b9c6d2; padding: 8px 10px; height: 88px;
+  overflow: hidden; }
 .head .dow { font-weight: 700; font-size: 14px; }
 .head .dt { color: #5b6b7b; font-size: 11px; }
 .head .meta { font-size: 11px; color: #5b6b7b; margin-top: 3px;
