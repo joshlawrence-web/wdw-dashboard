@@ -179,18 +179,11 @@
     {
       "date": "2026-08-29",
       "hotel": "Grand Destino",
-      "park": "Hollywood Studios",
+      "park": "Animal Kingdom",
       "blocks": [
         {
-          "start": "08:00",
-          "end": "09:00",
-          "cat": "chill",
-          "emoji": "☀️",
-          "title": "Up + breakfast"
-        },
-        {
-          "start": "09:00",
-          "end": "09:30",
+          "start": "06:00",
+          "end": "06:30",
           "cat": "travel",
           "emoji": "🚌",
           "title": "Bus to Hollywood Studios"
