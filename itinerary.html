@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WDW 2026 — Itinerary</title>
+<style>
+:root { color-scheme: light; --px-hr: 68px; --gutter: 56px; --col: 200px; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #eef2f6; color: #1c2733;
+  font: 16px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+header { padding: 20px 20px 12px; }
+h1 { margin: 0 0 4px; font-size: 24px; letter-spacing: -0.02em; }
+.sub { color: #5b6b7b; margin: 0; font-size: 13px; }
+.legend { display: flex; gap: 8px 14px; flex-wrap: wrap; font-size: 12px;
+  color: #5b6b7b; padding: 10px 20px 14px; }
+.legend span { display: inline-flex; align-items: center; gap: 5px; }
+.legend i { width: 11px; height: 11px; border-radius: 3px; display: inline-block; }
+.cal { overflow: auto; max-height: 84vh; background: #fff;
+  border-top: 1px solid #dde4ea; border-bottom: 1px solid #dde4ea; }
+.grid { display: grid; grid-auto-flow: column; grid-auto-columns: var(--col);
+  width: max-content; }
+.grid > .times { grid-column: 1; }
+.col { border-left: 1px solid #e6ecf2; }
+.head { position: sticky; top: 0; z-index: 3; background: #f4f7fa;
+  border-bottom: 2px solid #b9c6d2; padding: 8px 10px; height: 74px; }
+.head .dow { font-weight: 700; font-size: 14px; }
+.head .dt { color: #5b6b7b; font-size: 11px; }
+.head .meta { font-size: 11px; color: #5b6b7b; margin-top: 3px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.body { position: relative; }
+/* time gutter — pinned left, and its header pinned top-left */
+.times { position: sticky; left: 0; z-index: 4; background: #fff;
+  width: var(--gutter); min-width: var(--gutter); }
+.times .head { background: #f4f7fa; z-index: 5; }
+.times .body { border-right: 1px solid #b9c6d2; }
+.hour { position: absolute; left: 0; right: 0; text-align: right; padding-right: 6px;
+  font-size: 11px; color: #5b6b7b; transform: translateY(-50%); }
+.rule { position: absolute; left: 0; right: 0; border-top: 1px solid #f0f3f6; }
+.blk { position: absolute; border-radius: 6px; padding: 5px 7px; overflow: hidden;
+  font-size: 12px; line-height: 1.25; color: #1c2733;
+  border: 1px solid var(--c); background: color-mix(in srgb, var(--c) 16%, #fff);
+  border-left: 4px solid var(--c); }
+.blk b { font-weight: 600; }
+.blk .t { display: block; font-size: 10px; color: #5b6b7b; }
+.blk .n { display: block; font-size: 10px; color: #5b6b7b; margin-top: 2px; }
+.blk.cancel { opacity: 0.65; text-decoration: line-through; }
+.err { padding: 20px; color: #b91c1c; }
+</style>
+</head>
+<body>
+<header>
+  <h1 id="title">WDW 2026</h1>
+  <p class="sub" id="sub"></p>
+</header>
+<div class="legend" id="legend"></div>
+<div class="cal"><div class="grid" id="grid"></div></div>
+<div class="err" id="err"></div>
+
+<script>
+const mins = t => (+t.slice(0,2)) * 60 + (+t.slice(3,5));
+const el = (tag, cls, html) => { const n = document.createElement(tag);
+  if (cls) n.className = cls; if (html != null) n.innerHTML = html; return n; };
+
+// ponytail: first-fit lane packing. Only overlap today is one cancelled ADR,
+// but two blocks on top of each other is unreadable and this is 8 lines.
+function lanes(blocks) {
+  const ends = [];
+  for (const b of blocks) {
+    let i = ends.findIndex(e => e <= mins(b.start));
+    if (i < 0) { i = ends.length; }
+    ends[i] = mins(b.end);
+    b._lane = i;
+  }
+  return Math.max(1, ends.length);
+}
+
+function render(trip) {
+  const t0 = mins(trip.dayStart), t1 = mins(trip.dayEnd);
+  const PX = parseFloat(getComputedStyle(document.documentElement)
+    .getPropertyValue('--px-hr'));
+  const y = m => (m - t0) / 60 * PX;
+  const H = y(t1);
+
+  document.getElementById('title').textContent = trip.title;
+  document.getElementById('sub').textContent = trip.timezoneNote || '';
+
+  const lg = document.getElementById('legend');
+  for (const [k, c] of Object.entries(trip.categories))
+    lg.append(el('span', '', `<i style="background:${c.color}"></i>${c.label}`));
+
+  const grid = document.getElementById('grid');
+
+  // time gutter
+  const g = el('div', 'col times');
+  g.append(el('div', 'head'));
+  const gb = el('div', 'body');
+  gb.style.height = H + 'px';
+  for (let m = t0; m <= t1; m += 60) {
+    const h = m % 1440, ampm = h < 12 ? 'am' : 'pm', hr = h % 12 || 12;
+    const lab = el('div', 'hour', hr + ampm);
+    lab.style.top = y(m) + 'px';
+    gb.append(lab);
+  }
+  g.append(gb);
+  grid.append(g);
+
+  for (const d of trip.days) {
+    const date = new Date(d.date + 'T12:00:00');
+    const col = el('div', 'col');
+    const head = el('div', 'head');
+    head.innerHTML =
+      `<div class="dow">${date.toLocaleDateString('en-GB', { weekday: 'short' })}</div>` +
+      `<div class="dt">${date.toLocaleDateString('en-GB',
+        { day: '2-digit', month: 'short' })}</div>` +
+      `<div class="meta">🏨 ${d.hotel || '—'}</div>` +
+      `<div class="meta">${d.park ? '🎢 ' + d.park : '&nbsp;'}</div>`;
+    col.append(head);
+
+    const body = el('div', 'body');
+    body.style.height = H + 'px';
+    for (let m = t0; m <= t1; m += 60) {
+      const r = el('div', 'rule'); r.style.top = y(m) + 'px'; body.append(r);
+    }
+
+    const blocks = [...d.blocks].sort((a, b) => mins(a.start) - mins(b.start));
+    const n = lanes(blocks);
+    for (const b of blocks) {
+      const box = el('div', 'blk' + (b.cancel ? ' cancel' : ''));
+      box.style.setProperty('--c', trip.categories[b.cat].color);
+      box.style.top = y(mins(b.start)) + 'px';
+      box.style.height = Math.max(22, y(mins(b.end)) - y(mins(b.start)) - 3) + 'px';
+      box.style.left = `calc(${b._lane / n * 100}% + 3px)`;
+      box.style.width = `calc(${100 / n}% - 6px)`;
+      box.innerHTML = `<b>${b.emoji || ''} ${b.title}</b>` +
+        `<span class="t">${b.time || b.start + '–' + b.end}</span>` +
+        (b.note ? `<span class="n">${b.note}</span>` : '');
+      box.title = `${b.start}–${b.end} · ${b.title}${b.note ? ' · ' + b.note : ''}`;
+      body.append(box);
+    }
+    col.append(body);
+    grid.append(col);
+  }
+}
+
+fetch('trip.json')
+  .then(r => r.json())
+  .then(render)
+  .catch(e => document.getElementById('err').textContent =
+    'Could not load trip.json — open via a web server or GitHub Pages, not file://. '
+    + e);
+</script>
+</body>
+</html>
