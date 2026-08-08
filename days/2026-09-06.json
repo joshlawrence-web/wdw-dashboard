@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-06",
+  "hotel": "Home",
+  "park": null,
+  "blocks": [
+    {
+      "start": "09:40",
+      "end": "10:45",
+      "cat": "travel",
+      "emoji": "✈️",
+      "title": "Land in Manchester",
+      "time": "9.40am"
+    },
+    {
+      "start": "10:45",
+      "end": "13:00",
+      "cat": "travel",
+      "emoji": "🚗",
+      "title": "Drive home"
+    }
+  ]
+}

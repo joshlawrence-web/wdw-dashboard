@@ -1,0 +1,52 @@
+{
+  "date": "2026-08-27",
+  "hotel": "Grand Destino",
+  "park": null,
+  "blocks": [
+    {
+      "start": "06:00",
+      "end": "09:15",
+      "cat": "travel",
+      "emoji": "🛬",
+      "title": "MAN airport",
+      "note": "Bags, security, breakfast"
+    },
+    {
+      "start": "09:15",
+      "end": "13:45",
+      "cat": "travel",
+      "emoji": "✈️",
+      "title": "Fly MAN → MCO",
+      "note": "Dep 9.15am UK · land 1.45pm ET"
+    },
+    {
+      "start": "13:45",
+      "end": "15:30",
+      "cat": "travel",
+      "emoji": "🛢️",
+      "title": "Immigration + transfer"
+    },
+    {
+      "start": "15:30",
+      "end": "16:30",
+      "cat": "hotel",
+      "emoji": "🏨",
+      "title": "Check in Grand Destino"
+    },
+    {
+      "start": "16:30",
+      "end": "18:15",
+      "cat": "shop",
+      "emoji": "🛍️",
+      "title": "Outlets"
+    },
+    {
+      "start": "18:45",
+      "end": "20:45",
+      "cat": "dining",
+      "emoji": "🍖",
+      "title": "Boma",
+      "time": "6.45pm"
+    }
+  ]
+}

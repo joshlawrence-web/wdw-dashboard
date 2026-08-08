@@ -4,16 +4,46 @@
   "dayStart": "04:00",
   "dayEnd": "24:00",
   "categories": {
-    "travel":  { "label": "Travel",        "color": "#3b82f6" },
-    "work":    { "label": "Work",          "color": "#94a3b8" },
-    "park":    { "label": "Park",          "color": "#a855f7" },
-    "ride":    { "label": "Must-do ride",  "color": "#7c3aed" },
-    "dining":  { "label": "Reservation",   "color": "#ef4444" },
-    "quick":   { "label": "Quick service", "color": "#f97316" },
-    "chill":   { "label": "Pool / chill",  "color": "#eab308" },
-    "shop":    { "label": "Shops",         "color": "#10b981" },
-    "hotel":   { "label": "Hotel",         "color": "#06b6d4" },
-    "show":    { "label": "Show",          "color": "#ec4899" }
+    "travel": {
+      "label": "Travel",
+      "color": "#3b82f6"
+    },
+    "work": {
+      "label": "Work",
+      "color": "#94a3b8"
+    },
+    "park": {
+      "label": "Park",
+      "color": "#a855f7"
+    },
+    "ride": {
+      "label": "Must-do ride",
+      "color": "#7c3aed"
+    },
+    "dining": {
+      "label": "Reservation",
+      "color": "#ef4444"
+    },
+    "quick": {
+      "label": "Quick service",
+      "color": "#f97316"
+    },
+    "chill": {
+      "label": "Pool / chill",
+      "color": "#eab308"
+    },
+    "shop": {
+      "label": "Shops",
+      "color": "#10b981"
+    },
+    "hotel": {
+      "label": "Hotel",
+      "color": "#06b6d4"
+    },
+    "show": {
+      "label": "Show",
+      "color": "#ec4899"
+    }
   },
   "days": [
     {
@@ -21,10 +51,34 @@
       "hotel": "Radisson Blu (MAN)",
       "park": null,
       "blocks": [
-        { "start": "09:00", "end": "17:00", "cat": "work",   "emoji": "💻", "title": "Finish work" },
-        { "start": "17:00", "end": "20:00", "cat": "travel", "emoji": "🚗", "title": "Travel to Manchester" },
-        { "start": "20:00", "end": "21:00", "cat": "hotel",  "emoji": "🏨", "title": "Check in Radisson Blu" },
-        { "start": "21:00", "end": "22:00", "cat": "dining", "emoji": "🍽️", "title": "Dinner at hotel" }
+        {
+          "start": "09:00",
+          "end": "17:00",
+          "cat": "work",
+          "emoji": "💻",
+          "title": "Finish work"
+        },
+        {
+          "start": "17:00",
+          "end": "20:00",
+          "cat": "travel",
+          "emoji": "🚗",
+          "title": "Travel to Manchester"
+        },
+        {
+          "start": "20:00",
+          "end": "21:00",
+          "cat": "hotel",
+          "emoji": "🏨",
+          "title": "Check in Radisson Blu"
+        },
+        {
+          "start": "21:00",
+          "end": "22:00",
+          "cat": "dining",
+          "emoji": "🍽️",
+          "title": "Dinner at hotel"
+        }
       ]
     },
     {
@@ -32,12 +86,51 @@
       "hotel": "Grand Destino",
       "park": null,
       "blocks": [
-        { "start": "06:00", "end": "09:15", "cat": "travel", "emoji": "🛬", "title": "MAN airport", "note": "Bags, security, breakfast" },
-        { "start": "09:15", "end": "13:45", "cat": "travel", "emoji": "✈️", "title": "Fly MAN → MCO", "note": "Dep 9.15am UK · land 1.45pm ET" },
-        { "start": "13:45", "end": "15:30", "cat": "travel", "emoji": "🛢️", "title": "Immigration + transfer" },
-        { "start": "15:30", "end": "16:30", "cat": "hotel",  "emoji": "🏨", "title": "Check in Grand Destino" },
-        { "start": "16:30", "end": "18:15", "cat": "shop",   "emoji": "🛍️", "title": "Outlets" },
-        { "start": "18:45", "end": "20:45", "cat": "dining", "emoji": "🍖", "title": "Boma", "time": "6.45pm" }
+        {
+          "start": "06:00",
+          "end": "09:15",
+          "cat": "travel",
+          "emoji": "🛬",
+          "title": "MAN airport",
+          "note": "Bags, security, breakfast"
+        },
+        {
+          "start": "09:15",
+          "end": "13:45",
+          "cat": "travel",
+          "emoji": "✈️",
+          "title": "Fly MAN → MCO",
+          "note": "Dep 9.15am UK · land 1.45pm ET"
+        },
+        {
+          "start": "13:45",
+          "end": "15:30",
+          "cat": "travel",
+          "emoji": "🛢️",
+          "title": "Immigration + transfer"
+        },
+        {
+          "start": "15:30",
+          "end": "16:30",
+          "cat": "hotel",
+          "emoji": "🏨",
+          "title": "Check in Grand Destino"
+        },
+        {
+          "start": "16:30",
+          "end": "18:15",
+          "cat": "shop",
+          "emoji": "🛍️",
+          "title": "Outlets"
+        },
+        {
+          "start": "18:45",
+          "end": "20:45",
+          "cat": "dining",
+          "emoji": "🍖",
+          "title": "Boma",
+          "time": "6.45pm"
+        }
       ]
     },
     {
@@ -45,13 +138,57 @@
       "hotel": "Grand Destino",
       "park": "Hollywood Studios",
       "blocks": [
-        { "start": "04:00", "end": "12:30", "cat": "work",   "emoji": "💻", "title": "Work" },
-        { "start": "12:30", "end": "13:30", "cat": "chill",  "emoji": "🛌", "title": "Lunch + get ready" },
-        { "start": "13:30", "end": "14:00", "cat": "travel", "emoji": "🚌", "title": "Bus to Hollywood Studios" },
-        { "start": "14:00", "end": "16:15", "cat": "ride",   "emoji": "🎢", "title": "Slinky · Rock'n Rollercoaster" },
-        { "start": "16:30", "end": "18:00", "cat": "dining", "emoji": "🍽️", "title": "50's Prime Time", "time": "4.30pm" },
-        { "start": "18:00", "end": "19:30", "cat": "ride",   "emoji": "🤠", "title": "Toy Story Mania", "note": "Snacks: cookies, carrot cake" },
-        { "start": "19:30", "end": "21:00", "cat": "show",   "emoji": "🔥", "title": "Fantasmic — 1st show" }
+        {
+          "start": "04:00",
+          "end": "12:30",
+          "cat": "work",
+          "emoji": "💻",
+          "title": "Work"
+        },
+        {
+          "start": "12:30",
+          "end": "13:30",
+          "cat": "chill",
+          "emoji": "🛌",
+          "title": "Lunch + get ready"
+        },
+        {
+          "start": "13:30",
+          "end": "14:00",
+          "cat": "travel",
+          "emoji": "🚌",
+          "title": "Bus to Hollywood Studios"
+        },
+        {
+          "start": "14:00",
+          "end": "16:15",
+          "cat": "ride",
+          "emoji": "🎢",
+          "title": "Slinky · Rock'n Rollercoaster"
+        },
+        {
+          "start": "16:30",
+          "end": "18:00",
+          "cat": "dining",
+          "emoji": "🍽️",
+          "title": "50's Prime Time",
+          "time": "4.30pm"
+        },
+        {
+          "start": "18:00",
+          "end": "19:30",
+          "cat": "ride",
+          "emoji": "🤠",
+          "title": "Toy Story Mania",
+          "note": "Snacks: cookies, carrot cake"
+        },
+        {
+          "start": "19:30",
+          "end": "21:00",
+          "cat": "show",
+          "emoji": "🔥",
+          "title": "Fantasmic — 1st show"
+        }
       ]
     },
     {
@@ -59,14 +196,63 @@
       "hotel": "Grand Destino",
       "park": "Hollywood Studios",
       "blocks": [
-        { "start": "08:00", "end": "09:00", "cat": "chill",  "emoji": "☀️", "title": "Up + breakfast" },
-        { "start": "09:00", "end": "09:30", "cat": "travel", "emoji": "🚌", "title": "Bus to Hollywood Studios" },
-        { "start": "09:30", "end": "13:30", "cat": "park",   "emoji": "🎡", "title": "Park" },
-        { "start": "13:35", "end": "15:00", "cat": "dining", "emoji": "🤠", "title": "Roundup Rodeo", "time": "1.35pm" },
-        { "start": "15:00", "end": "16:30", "cat": "shop",   "emoji": "🛍️", "title": "Park + shops" },
-        { "start": "16:30", "end": "18:30", "cat": "chill",  "emoji": "🏖️", "title": "Pool / chill" },
-        { "start": "18:30", "end": "20:00", "cat": "quick",  "emoji": "🍔", "title": "D-Luxe Burger" },
-        { "start": "20:00", "end": "22:00", "cat": "shop",   "emoji": "✨", "title": "Disney Springs evening" }
+        {
+          "start": "08:00",
+          "end": "09:00",
+          "cat": "chill",
+          "emoji": "☀️",
+          "title": "Up + breakfast"
+        },
+        {
+          "start": "09:00",
+          "end": "09:30",
+          "cat": "travel",
+          "emoji": "🚌",
+          "title": "Bus to Hollywood Studios"
+        },
+        {
+          "start": "09:30",
+          "end": "13:30",
+          "cat": "park",
+          "emoji": "🎡",
+          "title": "Park"
+        },
+        {
+          "start": "13:35",
+          "end": "15:00",
+          "cat": "dining",
+          "emoji": "🤠",
+          "title": "Roundup Rodeo",
+          "time": "1.35pm"
+        },
+        {
+          "start": "15:00",
+          "end": "16:30",
+          "cat": "shop",
+          "emoji": "🛍️",
+          "title": "Park + shops"
+        },
+        {
+          "start": "16:30",
+          "end": "18:30",
+          "cat": "chill",
+          "emoji": "🏖️",
+          "title": "Pool / chill"
+        },
+        {
+          "start": "18:30",
+          "end": "20:00",
+          "cat": "quick",
+          "emoji": "🍔",
+          "title": "D-Luxe Burger"
+        },
+        {
+          "start": "20:00",
+          "end": "22:00",
+          "cat": "shop",
+          "emoji": "✨",
+          "title": "Disney Springs evening"
+        }
       ]
     },
     {
@@ -74,15 +260,71 @@
       "hotel": "Grand Destino",
       "park": "Epcot",
       "blocks": [
-        { "start": "07:30", "end": "08:30", "cat": "chill",  "emoji": "☀️", "title": "Up + breakfast" },
-        { "start": "08:30", "end": "09:00", "cat": "travel", "emoji": "🚌", "title": "Skyliner to Epcot" },
-        { "start": "09:00", "end": "12:30", "cat": "ride",   "emoji": "🎢", "title": "Figment · Nemo · Spaceship Earth · Soarin'" },
-        { "start": "12:30", "end": "13:30", "cat": "quick",  "emoji": "🍗", "title": "Regal Eagle" },
-        { "start": "13:30", "end": "15:00", "cat": "park",   "emoji": "🌍", "title": "World Showcase", "note": "School Bread, Viking Coffee" },
-        { "start": "15:00", "end": "16:30", "cat": "shop",   "emoji": "🛍️", "title": "Outlets" },
-        { "start": "16:30", "end": "19:15", "cat": "chill",  "emoji": "🏖️", "title": "Pool / chill" },
-        { "start": "19:15", "end": "20:10", "cat": "travel", "emoji": "🚝", "title": "To Contemporary" },
-        { "start": "20:10", "end": "22:00", "cat": "dining", "emoji": "🥩", "title": "Steakhouse 71", "time": "8.10pm" }
+        {
+          "start": "07:30",
+          "end": "08:30",
+          "cat": "chill",
+          "emoji": "☀️",
+          "title": "Up + breakfast"
+        },
+        {
+          "start": "08:30",
+          "end": "09:00",
+          "cat": "travel",
+          "emoji": "🚌",
+          "title": "Skyliner to Epcot"
+        },
+        {
+          "start": "09:00",
+          "end": "12:30",
+          "cat": "ride",
+          "emoji": "🎢",
+          "title": "Figment · Nemo · Spaceship Earth · Soarin'"
+        },
+        {
+          "start": "12:30",
+          "end": "13:30",
+          "cat": "quick",
+          "emoji": "🍗",
+          "title": "Regal Eagle"
+        },
+        {
+          "start": "13:30",
+          "end": "15:00",
+          "cat": "park",
+          "emoji": "🌍",
+          "title": "World Showcase",
+          "note": "School Bread, Viking Coffee"
+        },
+        {
+          "start": "15:00",
+          "end": "16:30",
+          "cat": "shop",
+          "emoji": "🛍️",
+          "title": "Outlets"
+        },
+        {
+          "start": "16:30",
+          "end": "19:15",
+          "cat": "chill",
+          "emoji": "🏖️",
+          "title": "Pool / chill"
+        },
+        {
+          "start": "19:15",
+          "end": "20:10",
+          "cat": "travel",
+          "emoji": "🚝",
+          "title": "To Contemporary"
+        },
+        {
+          "start": "20:10",
+          "end": "22:00",
+          "cat": "dining",
+          "emoji": "🥩",
+          "title": "Steakhouse 71",
+          "time": "8.10pm"
+        }
       ]
     },
     {
@@ -90,15 +332,73 @@
       "hotel": "All Star Music",
       "park": "Magic Kingdom",
       "blocks": [
-        { "start": "07:00", "end": "08:00", "cat": "hotel",  "emoji": "🧳", "title": "Pack + check out Grand Destino" },
-        { "start": "08:00", "end": "09:00", "cat": "travel", "emoji": "🚌", "title": "Bus to Magic Kingdom" },
-        { "start": "09:00", "end": "12:30", "cat": "park",   "emoji": "🏰", "title": "Magic Kingdom", "note": "Bacon cinnamon roll" },
-        { "start": "12:30", "end": "13:30", "cat": "quick",  "emoji": "⚓", "title": "Columbia Harbour House" },
-        { "start": "13:30", "end": "16:00", "cat": "park",   "emoji": "🏰", "title": "Magic Kingdom", "note": "Funnel cake" },
-        { "start": "16:00", "end": "17:30", "cat": "hotel",  "emoji": "🏨", "title": "Check in All Star Music" },
-        { "start": "17:30", "end": "19:00", "cat": "shop",   "emoji": "🛒", "title": "Walmart / Target" },
-        { "start": "19:00", "end": "20:30", "cat": "quick",  "emoji": "🐷", "title": "Polite Pig" },
-        { "start": "12:00", "end": "13:00", "cat": "dining", "emoji": "❌", "title": "Spice Road Table", "note": "CANCEL THIS", "cancel": true }
+        {
+          "start": "07:00",
+          "end": "08:00",
+          "cat": "hotel",
+          "emoji": "🧳",
+          "title": "Pack + check out Grand Destino"
+        },
+        {
+          "start": "08:00",
+          "end": "09:00",
+          "cat": "travel",
+          "emoji": "🚌",
+          "title": "Bus to Magic Kingdom"
+        },
+        {
+          "start": "09:00",
+          "end": "12:30",
+          "cat": "park",
+          "emoji": "🏰",
+          "title": "Magic Kingdom",
+          "note": "Bacon cinnamon roll"
+        },
+        {
+          "start": "12:30",
+          "end": "13:30",
+          "cat": "quick",
+          "emoji": "⚓",
+          "title": "Columbia Harbour House"
+        },
+        {
+          "start": "13:30",
+          "end": "16:00",
+          "cat": "park",
+          "emoji": "🏰",
+          "title": "Magic Kingdom",
+          "note": "Funnel cake"
+        },
+        {
+          "start": "16:00",
+          "end": "17:30",
+          "cat": "hotel",
+          "emoji": "🏨",
+          "title": "Check in All Star Music"
+        },
+        {
+          "start": "17:30",
+          "end": "19:00",
+          "cat": "shop",
+          "emoji": "🛒",
+          "title": "Walmart / Target"
+        },
+        {
+          "start": "19:00",
+          "end": "20:30",
+          "cat": "quick",
+          "emoji": "🐷",
+          "title": "Polite Pig"
+        },
+        {
+          "start": "12:00",
+          "end": "13:00",
+          "cat": "dining",
+          "emoji": "❌",
+          "title": "Spice Road Table",
+          "note": "CANCEL THIS",
+          "cancel": true
+        }
       ]
     },
     {
@@ -106,9 +406,27 @@
       "hotel": "All Star Music",
       "park": null,
       "blocks": [
-        { "start": "04:00", "end": "12:30", "cat": "work",  "emoji": "💻", "title": "Work" },
-        { "start": "12:30", "end": "14:00", "cat": "chill", "emoji": "🛌", "title": "Lunch + nap" },
-        { "start": "14:00", "end": "18:00", "cat": "chill", "emoji": "🏖️", "title": "Pool / chill" }
+        {
+          "start": "04:00",
+          "end": "12:30",
+          "cat": "work",
+          "emoji": "💻",
+          "title": "Work"
+        },
+        {
+          "start": "12:30",
+          "end": "14:00",
+          "cat": "chill",
+          "emoji": "🛌",
+          "title": "Lunch + nap"
+        },
+        {
+          "start": "14:00",
+          "end": "18:00",
+          "cat": "chill",
+          "emoji": "🏖️",
+          "title": "Pool / chill"
+        }
       ]
     },
     {
@@ -116,11 +434,42 @@
       "hotel": "All Star Music",
       "park": "Magic Kingdom",
       "blocks": [
-        { "start": "04:00", "end": "12:30", "cat": "work",   "emoji": "💻", "title": "Work" },
-        { "start": "12:30", "end": "15:15", "cat": "chill",  "emoji": "🛌", "title": "Lunch + chill" },
-        { "start": "15:15", "end": "16:00", "cat": "travel", "emoji": "🚌", "title": "Bus to Magic Kingdom" },
-        { "start": "16:00", "end": "17:30", "cat": "dining", "emoji": "🏴‍☠️", "title": "Beak & Barrel", "time": "4.00pm" },
-        { "start": "17:30", "end": "22:00", "cat": "park",   "emoji": "🏰", "title": "Magic Kingdom evening" }
+        {
+          "start": "04:00",
+          "end": "12:30",
+          "cat": "work",
+          "emoji": "💻",
+          "title": "Work"
+        },
+        {
+          "start": "12:30",
+          "end": "15:15",
+          "cat": "chill",
+          "emoji": "🛌",
+          "title": "Lunch + chill"
+        },
+        {
+          "start": "15:15",
+          "end": "16:00",
+          "cat": "travel",
+          "emoji": "🚌",
+          "title": "Bus to Magic Kingdom"
+        },
+        {
+          "start": "16:00",
+          "end": "17:30",
+          "cat": "dining",
+          "emoji": "🏴‍☠️",
+          "title": "Beak & Barrel",
+          "time": "4.00pm"
+        },
+        {
+          "start": "17:30",
+          "end": "22:00",
+          "cat": "park",
+          "emoji": "🏰",
+          "title": "Magic Kingdom evening"
+        }
       ]
     },
     {
@@ -128,9 +477,27 @@
       "hotel": "All Star Music",
       "park": null,
       "blocks": [
-        { "start": "04:00", "end": "12:30", "cat": "work",  "emoji": "💻", "title": "Work" },
-        { "start": "12:30", "end": "14:00", "cat": "chill", "emoji": "🛌", "title": "Lunch + nap" },
-        { "start": "14:00", "end": "18:00", "cat": "chill", "emoji": "🏖️", "title": "Pool / chill" }
+        {
+          "start": "04:00",
+          "end": "12:30",
+          "cat": "work",
+          "emoji": "💻",
+          "title": "Work"
+        },
+        {
+          "start": "12:30",
+          "end": "14:00",
+          "cat": "chill",
+          "emoji": "🛌",
+          "title": "Lunch + nap"
+        },
+        {
+          "start": "14:00",
+          "end": "18:00",
+          "cat": "chill",
+          "emoji": "🏖️",
+          "title": "Pool / chill"
+        }
       ]
     },
     {
@@ -138,12 +505,50 @@
       "hotel": "All Star Music",
       "park": "Epcot",
       "blocks": [
-        { "start": "04:00", "end": "12:30", "cat": "work",   "emoji": "💻", "title": "Work" },
-        { "start": "12:30", "end": "13:30", "cat": "travel", "emoji": "🚌", "title": "Bus to Epcot" },
-        { "start": "14:00", "end": "15:30", "cat": "dining", "emoji": "🚀", "title": "Space 220 Lounge", "time": "2.00pm" },
-        { "start": "15:30", "end": "17:00", "cat": "park",   "emoji": "🌍", "title": "Epcot" },
-        { "start": "17:00", "end": "17:30", "cat": "travel", "emoji": "🚝", "title": "To Caribbean Beach" },
-        { "start": "17:30", "end": "19:15", "cat": "dining", "emoji": "🦞", "title": "Sebastian's", "time": "5.30pm" }
+        {
+          "start": "04:00",
+          "end": "12:30",
+          "cat": "work",
+          "emoji": "💻",
+          "title": "Work"
+        },
+        {
+          "start": "12:30",
+          "end": "13:30",
+          "cat": "travel",
+          "emoji": "🚌",
+          "title": "Bus to Epcot"
+        },
+        {
+          "start": "14:00",
+          "end": "15:30",
+          "cat": "dining",
+          "emoji": "🚀",
+          "title": "Space 220 Lounge",
+          "time": "2.00pm"
+        },
+        {
+          "start": "15:30",
+          "end": "17:00",
+          "cat": "park",
+          "emoji": "🌍",
+          "title": "Epcot"
+        },
+        {
+          "start": "17:00",
+          "end": "17:30",
+          "cat": "travel",
+          "emoji": "🚝",
+          "title": "To Caribbean Beach"
+        },
+        {
+          "start": "17:30",
+          "end": "19:15",
+          "cat": "dining",
+          "emoji": "🦞",
+          "title": "Sebastian's",
+          "time": "5.30pm"
+        }
       ]
     },
     {
@@ -151,13 +556,57 @@
       "hotel": "Flying home",
       "park": null,
       "blocks": [
-        { "start": "08:00", "end": "10:00", "cat": "hotel",  "emoji": "🧳", "title": "Pack + check out" },
-        { "start": "10:00", "end": "11:15", "cat": "shop",   "emoji": "🛒", "title": "Walmart / Target" },
-        { "start": "11:45", "end": "13:15", "cat": "dining", "emoji": "🐴", "title": "Whispering Canyon Cafe", "time": "11.45am" },
-        { "start": "13:15", "end": "16:00", "cat": "chill",  "emoji": "🛌", "title": "Last stops / chill" },
-        { "start": "16:00", "end": "17:30", "cat": "travel", "emoji": "🚗", "title": "To MCO" },
-        { "start": "17:30", "end": "20:30", "cat": "travel", "emoji": "🛬", "title": "MCO airport" },
-        { "start": "20:30", "end": "24:00", "cat": "travel", "emoji": "✈️", "title": "Fly MCO → MAN", "time": "8.30pm" }
+        {
+          "start": "08:00",
+          "end": "10:00",
+          "cat": "hotel",
+          "emoji": "🧳",
+          "title": "Pack + check out"
+        },
+        {
+          "start": "10:00",
+          "end": "11:15",
+          "cat": "shop",
+          "emoji": "🛒",
+          "title": "Walmart / Target"
+        },
+        {
+          "start": "11:45",
+          "end": "13:15",
+          "cat": "dining",
+          "emoji": "🐴",
+          "title": "Whispering Canyon Cafe",
+          "time": "11.45am"
+        },
+        {
+          "start": "13:15",
+          "end": "16:00",
+          "cat": "chill",
+          "emoji": "🛌",
+          "title": "Last stops / chill"
+        },
+        {
+          "start": "16:00",
+          "end": "17:30",
+          "cat": "travel",
+          "emoji": "🚗",
+          "title": "To MCO"
+        },
+        {
+          "start": "17:30",
+          "end": "20:30",
+          "cat": "travel",
+          "emoji": "🛬",
+          "title": "MCO airport"
+        },
+        {
+          "start": "20:30",
+          "end": "24:00",
+          "cat": "travel",
+          "emoji": "✈️",
+          "title": "Fly MCO → MAN",
+          "time": "8.30pm"
+        }
       ]
     },
     {
@@ -165,8 +614,21 @@
       "hotel": "Home",
       "park": null,
       "blocks": [
-        { "start": "09:40", "end": "10:45", "cat": "travel", "emoji": "✈️", "title": "Land in Manchester", "time": "9.40am" },
-        { "start": "10:45", "end": "13:00", "cat": "travel", "emoji": "🚗", "title": "Drive home" }
+        {
+          "start": "09:40",
+          "end": "10:45",
+          "cat": "travel",
+          "emoji": "✈️",
+          "title": "Land in Manchester",
+          "time": "9.40am"
+        },
+        {
+          "start": "10:45",
+          "end": "13:00",
+          "cat": "travel",
+          "emoji": "🚗",
+          "title": "Drive home"
+        }
       ]
     }
   ]

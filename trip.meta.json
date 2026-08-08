@@ -1,0 +1,48 @@
+{
+  "title": "WDW 2026",
+  "timezoneNote": "All times local to where we are that day.",
+  "dayStart": "04:00",
+  "dayEnd": "24:00",
+  "categories": {
+    "travel": {
+      "label": "Travel",
+      "color": "#3b82f6"
+    },
+    "work": {
+      "label": "Work",
+      "color": "#94a3b8"
+    },
+    "park": {
+      "label": "Park",
+      "color": "#a855f7"
+    },
+    "ride": {
+      "label": "Must-do ride",
+      "color": "#7c3aed"
+    },
+    "dining": {
+      "label": "Reservation",
+      "color": "#ef4444"
+    },
+    "quick": {
+      "label": "Quick service",
+      "color": "#f97316"
+    },
+    "chill": {
+      "label": "Pool / chill",
+      "color": "#eab308"
+    },
+    "shop": {
+      "label": "Shops",
+      "color": "#10b981"
+    },
+    "hotel": {
+      "label": "Hotel",
+      "color": "#06b6d4"
+    },
+    "show": {
+      "label": "Show",
+      "color": "#ec4899"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "date": "2026-08-26",
+  "hotel": "Radisson Blu (MAN)",
+  "park": null,
+  "blocks": [
+    {
+      "start": "09:00",
+      "end": "17:00",
+      "cat": "work",
+      "emoji": "💻",
+      "title": "Finish work"
+    },
+    {
+      "start": "17:00",
+      "end": "20:00",
+      "cat": "travel",
+      "emoji": "🚗",
+      "title": "Travel to Manchester"
+    },
+    {
+      "start": "20:00",
+      "end": "21:00",
+      "cat": "hotel",
+      "emoji": "🏨",
+      "title": "Check in Radisson Blu"
+    },
+    {
+      "start": "21:00",
+      "end": "22:00",
+      "cat": "dining",
+      "emoji": "🍽️",
+      "title": "Dinner at hotel"
+    }
+  ]
+}

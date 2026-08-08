@@ -1,0 +1,58 @@
+{
+  "date": "2026-09-05",
+  "hotel": "Flying home",
+  "park": null,
+  "blocks": [
+    {
+      "start": "08:00",
+      "end": "10:00",
+      "cat": "hotel",
+      "emoji": "🧳",
+      "title": "Pack + check out"
+    },
+    {
+      "start": "10:00",
+      "end": "11:15",
+      "cat": "shop",
+      "emoji": "🛒",
+      "title": "Walmart / Target"
+    },
+    {
+      "start": "11:45",
+      "end": "13:15",
+      "cat": "dining",
+      "emoji": "🐴",
+      "title": "Whispering Canyon Cafe",
+      "time": "11.45am"
+    },
+    {
+      "start": "13:15",
+      "end": "16:00",
+      "cat": "chill",
+      "emoji": "🛌",
+      "title": "Last stops / chill"
+    },
+    {
+      "start": "16:00",
+      "end": "17:30",
+      "cat": "travel",
+      "emoji": "🚗",
+      "title": "To MCO"
+    },
+    {
+      "start": "17:30",
+      "end": "20:30",
+      "cat": "travel",
+      "emoji": "🛬",
+      "title": "MCO airport"
+    },
+    {
+      "start": "20:30",
+      "end": "24:00",
+      "cat": "travel",
+      "emoji": "✈️",
+      "title": "Fly MCO → MAN",
+      "time": "8.30pm"
+    }
+  ]
+}

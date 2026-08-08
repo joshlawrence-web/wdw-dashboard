@@ -1,0 +1,58 @@
+{
+  "date": "2026-08-28",
+  "hotel": "Grand Destino",
+  "park": "Hollywood Studios",
+  "blocks": [
+    {
+      "start": "04:00",
+      "end": "12:30",
+      "cat": "work",
+      "emoji": "💻",
+      "title": "Work"
+    },
+    {
+      "start": "12:30",
+      "end": "13:30",
+      "cat": "chill",
+      "emoji": "🛌",
+      "title": "Lunch + get ready"
+    },
+    {
+      "start": "13:30",
+      "end": "14:00",
+      "cat": "travel",
+      "emoji": "🚌",
+      "title": "Bus to Hollywood Studios"
+    },
+    {
+      "start": "14:00",
+      "end": "16:15",
+      "cat": "ride",
+      "emoji": "🎢",
+      "title": "Slinky · Rock'n Rollercoaster"
+    },
+    {
+      "start": "16:30",
+      "end": "18:00",
+      "cat": "dining",
+      "emoji": "🍽️",
+      "title": "50's Prime Time",
+      "time": "4.30pm"
+    },
+    {
+      "start": "18:00",
+      "end": "19:30",
+      "cat": "ride",
+      "emoji": "🤠",
+      "title": "Toy Story Mania",
+      "note": "Snacks: cookies, carrot cake"
+    },
+    {
+      "start": "19:30",
+      "end": "21:00",
+      "cat": "show",
+      "emoji": "🔥",
+      "title": "Fantasmic — 1st show"
+    }
+  ]
+}

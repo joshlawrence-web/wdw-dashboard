@@ -1,0 +1,51 @@
+{
+  "date": "2026-09-04",
+  "hotel": "All Star Music",
+  "park": "Epcot",
+  "blocks": [
+    {
+      "start": "04:00",
+      "end": "12:30",
+      "cat": "work",
+      "emoji": "💻",
+      "title": "Work"
+    },
+    {
+      "start": "12:30",
+      "end": "13:30",
+      "cat": "travel",
+      "emoji": "🚌",
+      "title": "Bus to Epcot"
+    },
+    {
+      "start": "14:00",
+      "end": "15:30",
+      "cat": "dining",
+      "emoji": "🚀",
+      "title": "Space 220 Lounge",
+      "time": "2.00pm"
+    },
+    {
+      "start": "15:30",
+      "end": "17:00",
+      "cat": "park",
+      "emoji": "🌍",
+      "title": "Epcot"
+    },
+    {
+      "start": "17:00",
+      "end": "17:30",
+      "cat": "travel",
+      "emoji": "🚝",
+      "title": "To Caribbean Beach"
+    },
+    {
+      "start": "17:30",
+      "end": "19:15",
+      "cat": "dining",
+      "emoji": "🦞",
+      "title": "Sebastian's",
+      "time": "5.30pm"
+    }
+  ]
+}

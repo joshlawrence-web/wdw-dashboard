@@ -1,0 +1,17 @@
+name: build trip.json
+on:
+  push:
+    branches: [main]
+    paths: ['days/**', 'trip.meta.json', 'build.mjs']
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node build.mjs
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git diff --quiet trip.json || (git commit -am "chore: rebuild trip.json" && git push)

@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-02",
+  "hotel": "All Star Music",
+  "park": "Magic Kingdom",
+  "blocks": [
+    {
+      "start": "04:00",
+      "end": "12:30",
+      "cat": "work",
+      "emoji": "💻",
+      "title": "Work"
+    },
+    {
+      "start": "12:30",
+      "end": "15:15",
+      "cat": "chill",
+      "emoji": "🛌",
+      "title": "Lunch + chill"
+    },
+    {
+      "start": "15:15",
+      "end": "16:00",
+      "cat": "travel",
+      "emoji": "🚌",
+      "title": "Bus to Magic Kingdom"
+    },
+    {
+      "start": "16:00",
+      "end": "17:30",
+      "cat": "dining",
+      "emoji": "🏴‍☠️",
+      "title": "Beak & Barrel",
+      "time": "4.00pm"
+    },
+    {
+      "start": "17:30",
+      "end": "22:00",
+      "cat": "park",
+      "emoji": "🏰",
+      "title": "Magic Kingdom evening"
+    }
+  ]
+}

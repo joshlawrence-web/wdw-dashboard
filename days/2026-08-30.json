@@ -1,0 +1,72 @@
+{
+  "date": "2026-08-30",
+  "hotel": "Grand Destino",
+  "park": "Epcot",
+  "blocks": [
+    {
+      "start": "07:30",
+      "end": "08:30",
+      "cat": "chill",
+      "emoji": "☀️",
+      "title": "Up + breakfast"
+    },
+    {
+      "start": "08:30",
+      "end": "09:00",
+      "cat": "travel",
+      "emoji": "🚌",
+      "title": "Skyliner to Epcot"
+    },
+    {
+      "start": "09:00",
+      "end": "12:30",
+      "cat": "ride",
+      "emoji": "🎢",
+      "title": "Figment · Nemo · Spaceship Earth · Soarin'"
+    },
+    {
+      "start": "12:30",
+      "end": "13:30",
+      "cat": "quick",
+      "emoji": "🍗",
+      "title": "Regal Eagle"
+    },
+    {
+      "start": "13:30",
+      "end": "15:00",
+      "cat": "park",
+      "emoji": "🌍",
+      "title": "World Showcase",
+      "note": "School Bread, Viking Coffee"
+    },
+    {
+      "start": "15:00",
+      "end": "16:30",
+      "cat": "shop",
+      "emoji": "🛍️",
+      "title": "Outlets"
+    },
+    {
+      "start": "16:30",
+      "end": "19:15",
+      "cat": "chill",
+      "emoji": "🏖️",
+      "title": "Pool / chill"
+    },
+    {
+      "start": "19:15",
+      "end": "20:10",
+      "cat": "travel",
+      "emoji": "🚝",
+      "title": "To Contemporary"
+    },
+    {
+      "start": "20:10",
+      "end": "22:00",
+      "cat": "dining",
+      "emoji": "🥩",
+      "title": "Steakhouse 71",
+      "time": "8.10pm"
+    }
+  ]
+}

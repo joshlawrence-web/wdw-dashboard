@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-03",
+  "hotel": "All Star Music",
+  "park": null,
+  "blocks": [
+    {
+      "start": "04:00",
+      "end": "12:30",
+      "cat": "work",
+      "emoji": "💻",
+      "title": "Work"
+    },
+    {
+      "start": "12:30",
+      "end": "14:00",
+      "cat": "chill",
+      "emoji": "🛌",
+      "title": "Lunch + nap"
+    },
+    {
+      "start": "14:00",
+      "end": "18:00",
+      "cat": "chill",
+      "emoji": "🏖️",
+      "title": "Pool / chill"
+    }
+  ]
+}
