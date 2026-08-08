@@ -18,10 +18,8 @@ h1 { margin: 0 0 4px; font-size: 24px; letter-spacing: -0.02em; }
 .legend i { width: 11px; height: 11px; border-radius: 3px; display: inline-block; }
 .cal { overflow: auto; max-height: 84vh; background: #fff;
   border-top: 1px solid #dde4ea; border-bottom: 1px solid #dde4ea; }
-.grid { display: grid; grid-auto-flow: column; grid-auto-columns: var(--col);
-  width: max-content; }
-.grid > .times { grid-column: 1; }
-.col { border-left: 1px solid #e6ecf2; }
+.grid { display: flex; width: max-content; }
+.col { flex: 0 0 var(--col); border-left: 1px solid #e6ecf2; }
 .head { position: sticky; top: 0; z-index: 3; background: #f4f7fa;
   border-bottom: 2px solid #b9c6d2; padding: 8px 10px; height: 74px; }
 .head .dow { font-weight: 700; font-size: 14px; }
@@ -31,7 +29,7 @@ h1 { margin: 0 0 4px; font-size: 24px; letter-spacing: -0.02em; }
 .body { position: relative; }
 /* time gutter — pinned left, and its header pinned top-left */
 .times { position: sticky; left: 0; z-index: 4; background: #fff;
-  width: var(--gutter); min-width: var(--gutter); }
+  flex: 0 0 var(--gutter); border-left: 0; }
 .times .head { background: #f4f7fa; z-index: 5; }
 .times .body { border-right: 1px solid #b9c6d2; }
 .hour { position: absolute; left: 0; right: 0; text-align: right; padding-right: 6px;
@@ -79,8 +77,11 @@ function render(trip) {
   const t0 = mins(trip.dayStart), t1 = mins(trip.dayEnd);
   const PX = parseFloat(getComputedStyle(document.documentElement)
     .getPropertyValue('--px-hr'));
-  const y = m => (m - t0) / 60 * PX;
-  const H = y(t1);
+  // PAD: hour labels are centred on their rule, so the first and last would be
+  // half-clipped (the top one hides under the sticky header) without it.
+  const PAD = 12;
+  const y = m => PAD + (m - t0) / 60 * PX;
+  const H = y(t1) + PAD;
 
   document.getElementById('title').textContent = trip.title;
   document.getElementById('sub').textContent = trip.timezoneNote || '';
@@ -97,8 +98,8 @@ function render(trip) {
   const gb = el('div', 'body');
   gb.style.height = H + 'px';
   for (let m = t0; m <= t1; m += 60) {
-    const h = m % 1440, ampm = h < 12 ? 'am' : 'pm', hr = h % 12 || 12;
-    const lab = el('div', 'hour', hr + ampm);
+    const h = Math.floor(m / 60) % 24;
+    const lab = el('div', 'hour', (h % 12 || 12) + (h < 12 ? 'am' : 'pm'));
     lab.style.top = y(m) + 'px';
     gb.append(lab);
   }
